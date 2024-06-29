@@ -1,0 +1,243 @@
+<html><head><base href="https://sebas.host" /><title>⁂ sebas</title><style>
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  line-height: 1.6;
+  color: #e0e0e0;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #121212;
+}
+
+header {
+  background: #1a1a1a;
+  color: white;
+  text-align: center;
+  padding: 2em;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.8em;
+  letter-spacing: 2px;
+}
+
+.tagline {
+  font-style: italic;
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #b3e5fc;
+}
+
+nav {
+  margin-top: 20px;
+}
+
+nav a {
+  color: #b3e5fc;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #4fc3f7;
+  text-shadow: 0 0 5px rgba(79, 195, 247, 0.7);
+}
+
+section {
+  background: #1e1e1e;
+  margin-bottom: 30px;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+h2 {
+  color: #4fc3f7;
+  border-bottom: 2px solid #0288d1;
+  padding-bottom: 10px;
+}
+
+.skill-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.skill {
+  background: #263238;
+  color: #b3e5fc;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 1em;
+  transition: all 0.3s ease;
+}
+
+.skill:hover {
+  background: #0288d1;
+  color: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+#contact-email {
+  font-weight: bold;
+  color: #4fc3f7;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  color: #9e9e9e;
+  font-size: 0.9em;
+}
+
+.project {
+  border-left: 4px solid #0288d1;
+  padding-left: 20px;
+  margin-bottom: 25px;
+  transition: all 0.3s ease;
+}
+
+.project:hover {
+  border-left-color: #4fc3f7;
+  background-color: #212121;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+section {
+  animation: fadeIn 0.5s ease-out;
+}
+
+#lang-switch {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #0288d1;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#lang-switch:hover {
+  background: #4fc3f7;
+}
+
+.hidden {
+  display: none;
+}
+</style></head><body>
+  <header>
+    <h1>Sebastian Torrente</h1>
+    <p class="tagline" lang="en">Web Developer, UI/UX Designer & Tech Repair Specialist</p>
+    <p class="tagline hidden" lang="es">Desarrollador Web, Diseñador UI/UX y Especialista de la Reparación</p>
+    <nav>
+      <a href="#about" lang="en">About</a>
+      <a href="#skills" lang="en">Skills</a>
+      <a href="#projects" lang="en">Projects</a>
+      <a href="#contact" lang="en">Contact</a>
+      <a href="#about" lang="es" class="hidden">Sobre mí</a>
+      <a href="#skills" lang="es" class="hidden">Habilidades</a>
+      <a href="#projects" lang="es" class="hidden">Proyectos</a>
+      <a href="#contact" lang="es" class="hidden">Contacto</a>
+    </nav>
+    <button id="lang-switch">ES</button>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2 lang="en">About Me</h2>
+      <h2 lang="es" class="hidden">Sobre Mí</h2>
+      <p lang="en">Hello! I'm Sebastian Torrente, a passionate web developer with a keen eye for UI/UX design and a hands-on approach to technology. My unique blend of skills allows me to create stunning, user-friendly web experiences while also tackling real-world tech challenges through repair and reuse initiatives.</p>
+      <p lang="es" class="hidden">¡Hola! Soy Sebastian Torrente, un desarrollador web con una habilidad para el diseño UI/UX y un enfoque práctico de la tecnología. Mi combinación de habilidades me permite crear experiencias impresionantes y fáciles de usar, al tiempo que abordo desafíos tecnológicos del mundo real a través de iniciativas de reparación y reutilización.</p>
+    </section>
+
+    <section id="skills">
+      <h2 lang="en">Skills</h2>
+      <h2 lang="es" class="hidden">Habilidades</h2>
+      <div class="skill-container">
+        <span class="skill" lang="en">Web Development</span>
+        <span class="skill" lang="en">UI/UX Design</span>
+        <span class="skill">HTML5</span>
+        <span class="skill">CSS3</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill" lang="en">Responsive Design</span>
+        <span class="skill" lang="en">User Experience</span>
+        <span class="skill" lang="en">Prototyping</span>
+        <span class="skill" lang="en">Tech Repair</span>
+        <span class="skill" lang="en">Hardware Troubleshooting</span>
+        <span class="skill" lang="en">Sustainable Tech Practices</span>
+        <span class="skill hidden" lang="es">Desarrollo Web</span>
+        <span class="skill hidden" lang="es">Diseño UI/UX</span>
+        <span class="skill hidden" lang="es">Diseño Responsivo</span>
+        <span class="skill hidden" lang="es">Experiencia de Usuario</span>
+        <span class="skill hidden" lang="es">Prototipado</span>
+        <span class="skill hidden" lang="es">Reparación Tecnológica</span>
+        <span class="skill hidden" lang="es">Resolución de Problemas de Hardware</span>
+        <span class="skill hidden" lang="es">Prácticas Tecnológicas Sostenibles</span>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2 lang="en">Projects</h2>
+      <h2 lang="es" class="hidden">Proyectos</h2>
+      <div class="project">
+        <h3 lang="en">Responsive E-commerce Platform</h3>
+        <h3 lang="es" class="hidden">Plataforma de Comercio Electrónico Responsiva</h3>
+        <p lang="en">Developed a fully responsive e-commerce website with a focus on intuitive UI and seamless UX. Implemented modern design principles and optimized for various devices.</p>
+        <p lang="es" class="hidden">Desarrollé un sitio web de comercio electrónico completamente responsivo con un enfoque en UI intuitiva y UX fluida. Implementé principios de diseño modernos y optimicé para varios dispositivos.</p>
+      </div>
+      <div class="project">
+        <h3 lang="en">UI/UX Redesign for Merch shop</h3>
+        <h3 lang="es" class="hidden">Rediseño UI/UX para una tienda</h3>
+        <p lang="en">Volunteered to redesign the website of a merch shop for an influencer, focusing on improving user engagement and accessibility. The new design resulted in a 40% increase in online purchrases.</p>
+        <p lang="es" class="hidden">Me ofrecí como voluntario para rediseñar el sitio web de una tienda para un creador de contenido famoso, centrándome en mejorar la participación del usuario y la accesibilidad. El nuevo diseño resultó en un aumento del 40% en las compras en línea.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 lang="en">Get in Touch</h2>
+      <h2 lang="es" class="hidden">Contacto</h2>
+      <p lang="en">Whether you're looking to create a stunning web presence, need UI/UX consultation, or need help with tech, I'm here to help!</p>
+      <p lang="es" class="hidden">Ya sea que estés buscando crear una presencia web impresionante, necesites una consulta de UI/UX o quieras discutir sobre problemas que tengas con la tecnologia, ¡estoy aquí para ayudarte!</p>
+      <p lang="en">Email me at: <span id="contact-email"><a href="mailto:yo@sebas.host" class="__cf_email__" data-cfemail="1d6e787f7c6e69747c733369726f6f787369785d78657c706d7178337e7270">yo@sebas.host</a></span></p>
+      <p lang="es" class="hidden">Envíame un correo a: <span id="contact-email"><a href="mailto:yo@sebas.host" class="__cf_email__" data-cfemail="9fecfafdfeecebf6fef1b1ebf0ededfaf1ebfadffae7fef2eff3fab1fcf0f2">yo@sebas.host</a></span></p>
+    </section>
+  </main>
+
+  <footer>
+    <p lang="en">&copy; 2024 Sebastian Torrente. Crafted with ❤️</p>
+    <p lang="es" class="hidden">&copy; 2024 Sebastian Torrente. Creado con ❤️</p>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    const langSwitch = document.getElementById('lang-switch');
+    const enElements = document.querySelectorAll('[lang="en"]');
+    const esElements = document.querySelectorAll('[lang="es"]');
+
+    langSwitch.addEventListener('click', () => {
+      if (langSwitch.textContent === 'ES') {
+        enElements.forEach(el => el.classList.add('hidden'));
+        esElements.forEach(el => el.classList.remove('hidden'));
+        langSwitch.textContent = 'EN';
+      } else {
+        esElements.forEach(el => el.classList.add('hidden'));
+        enElements.forEach(el => el.classList.remove('hidden'));
+        langSwitch.textContent = 'ES';
+      }
+    });
+  </script>
+</body></html>
