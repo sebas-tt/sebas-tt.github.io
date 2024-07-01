@@ -1,0 +1,145 @@
+<html><head><base href="https://status.sebas.host">
+<title>Status - sebas.host</title>
+<style>
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  h1 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+  }
+  .status-card {
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  .status-indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .status-ok { background-color: #2ecc71; }
+  .status-warning { background-color: #f39c12; }
+  .status-error { background-color: #e74c3c; }
+  .service-name {
+    font-weight: bold;
+    color: #34495e;
+  }
+  .uptime {
+    float: right;
+    color: #7f8c8d;
+  }
+  .incident-log {
+    margin-top: 30px;
+  }
+  .incident {
+    border-left: 3px solid #3498db;
+    padding-left: 15px;
+    margin-bottom: 20px;
+  }
+  .incident-title {
+    font-weight: bold;
+    color: #2980b9;
+  }
+  .incident-date {
+    color: #7f8c8d;
+    font-size: 0.9em;
+  }
+  .refresh-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+  }
+  .refresh-button:hover {
+    background-color: #2980b9;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>System Status - sebas.host</h1>
+    
+    <div class="status-card">
+      <span class="status-indicator status-ok"></span>
+      <span class="service-name">Web Hosting</span>
+      <span class="uptime">Uptime: 99.99%</span>
+    </div>
+    
+    <div class="status-card">
+      <span class="status-indicator status-ok"></span>
+      <span class="service-name">Email Services</span>
+      <span class="uptime">Uptime: 99.98%</span>
+    </div>
+    
+    <div class="status-card">
+      <span class="status-indicator status-warning"></span>
+      <span class="service-name">Database Cluster</span>
+      <span class="uptime">Uptime: 99.95%</span>
+    </div>
+    
+    <div class="status-card">
+      <span class="status-indicator status-ok"></span>
+      <span class="service-name">DNS Services</span>
+      <span class="uptime">Uptime: 100%</span>
+    </div>
+    
+    <div class="status-card">
+      <span class="status-indicator status-ok"></span>
+      <span class="service-name">CDN</span>
+      <span class="uptime">Uptime: 99.99%</span>
+    </div>
+    
+    <div class="incident-log">
+      <h2>Recent Incidents</h2>
+      
+      <div class="incident">
+        <div class="incident-title">Database Cluster Performance Degradation</div>
+        <div class="incident-date">May 15, 2023 - 14:30 UTC</div>
+        <p>We are currently experiencing some performance issues with our database cluster. Our team is investigating and working on a resolution. Updates will be posted as they become available.</p>
+      </div>
+      
+      <div class="incident">
+        <div class="incident-title">Email Delivery Delays</div>
+        <div class="incident-date">May 10, 2023 - 09:15 UTC</div>
+        <p>Some users experienced delays in email delivery due to an issue with our email routing system. The problem was resolved at 11:45 UTC. We apologize for any inconvenience caused.</p>
+      </div>
+    </div>
+    
+    <button class="refresh-button" onclick="location.reload()">Refresh Status</button>
+  </div>
+
+  <script>
+    // This script would typically contain real-time update logic
+    // For this simulation, we'll just add a simple date update
+    document.addEventListener('DOMContentLoaded', function() {
+      var now = new Date();
+      var dateString = now.toUTCString();
+      var dateElement = document.createElement('p');
+      dateElement.textContent = 'Last updated: ' + dateString;
+      document.querySelector('.container').appendChild(dateElement);
+    });
+  </script>
+</body>
+</html>
