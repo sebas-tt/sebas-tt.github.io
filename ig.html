@@ -1,0 +1,216 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><!--<base href="https://sebas.host/ig">--><base href=".">
+<title>Spotify - sebas.host by Sebastian Torrente and rolffrom</title>
+<style>
+  body {
+    font-family: 'Circular Std', Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .player {
+    flex: 1;
+    background-color: #181818;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+    margin-right: 20px;
+  }
+  .lyrics-container {
+    flex: 1;
+    background-color: #282828;
+    border-radius: 8px;
+    padding: 20px;
+    overflow-y: auto;
+    height: 80vh;
+  }
+  .now-playing {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .album-art {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+    border-radius: 4px;
+  }
+  .track-info h2, .track-info h3 {
+    margin: 0;
+  }
+  .track-info h2 {
+    font-size: 28px;
+    margin-bottom: 5px;
+  }
+  .track-info h3 {
+    font-size: 18px;
+    color: #b3b3b3;
+  }
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .control-btn {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 32px;
+    margin: 0 15px;
+    cursor: pointer;
+  }
+  .play-btn {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #1ed760;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .progress-bar {
+    width: 100%;
+    height: 4px;
+    background-color: #535353;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .progress {
+    width: 30%;
+    height: 100%;
+    background-color: #1ed760;
+  }
+  .time-stamps {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #b3b3b3;
+    margin-top: 8px;
+  }
+  .lyrics {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+  }
+  .current-line {
+    color: #1ed760;
+    font-weight: bold;
+  }
+  .recommended-tracks {
+    margin-top: 20px;
+  }
+  .track-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+  }
+  .track-item img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 4px;
+  }
+  .track-item-info {
+    flex: 1;
+  }
+  .track-item-title {
+    font-weight: bold;
+  }
+  .track-item-artist {
+    font-size: 14px;
+    color: #b3b3b3;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="player">
+      <div class="now-playing">
+        <img src="https://raw.githubusercontent.com/sebas-tt/sebas-tt.github.io/main/svcover.png" alt="Album art for &#39;sebas.host&#39; by Sebastian Torrente" class="album-art">
+        <div class="track-info">
+          <h2>sebas.host</h2>
+          <h3>Sebastian Torrente, rolffrom
+</h3>
+        </div>
+      </div>
+      <div class="controls">
+        <button class="control-btn">
+          <svg width="32" height="32" viewBox="0 0 16 16" fill="#ffffff">
+            <path d="M13 2.5L5 7.119V3H3v10h2V8.881l8 4.619z"></path>
+          </svg>
+        </button>
+        
+        <button class="control-btn play-btn"><svg width="32" height="32" viewBox="0 0 16 16" fill="#000000"><path d="M4.018 14L14.41 8 4.018 2z"></path></svg></button>
+        
+        <button class="control-btn">
+          <svg width="32" height="32" viewBox="0 0 16 16" fill="#ffffff">
+            <path d="M3 2.5l8 4.619v-4.119h2v10h-2v-4.119l-8 4.619z"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+      <div class="time-stamps">
+        <span>0:53</span>
+        <span>1:47</span>
+      </div>
+      <div class="recommended-tracks">
+        <h3>Fila de reproduccion</h3>
+        <div class="track-item">
+          <img src="https://i.scdn.co/image/ab67616d000048518659ce6ed016e9d3551d1944" alt="Album art for &#39;Perdonarte, Para Que&#39; by Emilia">
+          <div class="track-item-info">
+            <div class="track-item-title">Ojos Verdes</div>
+            <div class="track-item-artist">Nicki Nicole</div>
+          </div>
+        </div>
+        <div class="track-item">
+          <img src="https://i.scdn.co/image/ab67616d00004851785da791bbcf68e43accedb3" alt="Album art for &#39;Tu Foto&#39; by Q Lokura, Valentino Merlo">
+          <div class="track-item-info">
+            <div class="track-item-title">Tu Foto</div>
+            <div class="track-item-artist">Q' Lokura, Valentino Merlo</div>
+          </div>
+        </div>
+        <div class="track-item">
+          <img src="https://i.scdn.co/image/ab67616d0000485168a450f7bcdc187e20f0ba0a" alt="Album art for &#39;REAL GANGSTA LOVE&#39; by Trueno">
+          <div class="track-item-info">
+            <div class="track-item-title">REAL GANGSTA LOVE</div>
+            <div class="track-item-artist">Trueno</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lyrics-container">
+      <h3>Letras</h3>
+      <div class="lyrics">
+        <p>Hola</p>
+        <p>Esta no es una cancion real</p>
+        <p>Pero esta pagina si es real</p>
+        <p>Me tomo 5 horas hacer esto</p>
+        <p>Y casi lo tiro todo a la mierda</p>
+        <p>Pero al final quedo todo lindo</p>
+        <p>En el futuro voy a usar esta pagina para algo</p>
+        <p>Pero por ahora</p>
+        <p class="current-line">La voy a dejar en mi bio de Instagram</p>
+        <p>Para confundir a mis amigos</p>
+        <p>Y a los que esten stalkeando mi pagina</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelector('.play-btn').addEventListener('click', function() {
+      const playIcon = '<svg width="32" height="32" viewBox="0 0 16 16" fill="#000000"><path d="M4.018 14L14.41 8 4.018 2z"></path></svg>';
+      const pauseIcon = '<svg width="32" height="32" viewBox="0 0 16 16" fill="#000000"><path d="M3 2h3v12H3zm7 0h3v12h-3z"></path></svg>';
+      this.innerHTML = this.innerHTML.includes('14.41') ? pauseIcon : playIcon;
+    });
+  </script>
+</body></html>
