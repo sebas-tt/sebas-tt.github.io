@@ -1,0 +1,231 @@
+<html w-tid="0"><head w-tid="1"><base href w-tid="2"/>
+<link rel="stylesheet" href="https://party.websim.ai/fonts.css?v=71025db5c65727de0a01a81c1d6d0eb1115ba93c">
+<link rel="stylesheet" href="https://party.websim.ai/ctxmenu.css?v=71025db5c65727de0a01a81c1d6d0eb1115ba93c">
+<script class="websim-injected">__WEBSIM_DATA__={"locationKey":"_rgq9035aggj","titleKey":"_020zysn6wzdb","id":"s5XyBeiJvKZqvK4Be","url":"https://music.stream.websim.ai/","version":"71025db5c65727de0a01a81c1d6d0eb1115ba93c","method":"eval","command":"Make it more like this design"}</script>
+<script class="websim-injected" src="https://party.websim.ai/dist/index.js?v=71025db5c65727de0a01a81c1d6d0eb1115ba93c"></script>
+
+<title w-tid="3">neo</title>
+<style w-tid="4">
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .container {
+    display: flex;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    max-width: 800px;
+    width: 100%;
+  }
+  .playlist {
+    flex: 1;
+    list-style-type: none;
+    padding: 0;
+    margin-right: 20px;
+  }
+  .playlist li {
+    background-color: #282828;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+  }
+  .playlist li:hover {
+    background-color: #3e3e3e;
+  }
+  .playlist li.active {
+    background-color: #1db954;
+  }
+  .play-button {
+    background-color: #1db954;
+    border: none;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .player {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .album-art {
+    width: 200px;
+    height: 200px;
+    background-color: #282828;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .album-art span {
+    font-size: 48px;
+  }
+  #nowPlaying {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .controls {
+    display: flex;
+    align-items: center;
+  }
+  .play-pause {
+    background-color: #1db954;
+    border: none;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+  }
+  .progress-bar {
+    width: 100%;
+    height: 5px;
+    background-color: #535353;
+    border-radius: 5px;
+    margin-top: 20px;
+    position: relative;
+  }
+  .progress {
+    width: 0;
+    height: 100%;
+    background-color: #1db954;
+    border-radius: 5px;
+    transition: width 0.1s linear;
+  }
+  .time {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #b3b3b3;
+  }
+</style>
+</head>
+<body w-tid="5">
+  <div class="container" w-tid="6">
+    <ul class="playlist" id="playlist" w-tid="7">
+      <li data-src="https://github.com/sebas-tt/sebas-tt.github.io/raw/main/Farm%20Rat%20Epitaph%20-%20The%20Star%20(His%20Dreams).mp3" w-tid="8">The Star <button class="play-button" w-tid="9">▶</button></li>
+      <li data-src="https://github.com/sebas-tt/sebas-tt.github.io/raw/main/Conan%20Gray%20-%20Family%20Line.mp3" w-tid="10">Family Line <button class="play-button" w-tid="11">▶</button></li>
+      <li data-src="https://github.com/sebas-tt/sebas-tt.github.io/raw/main/Dayglow%20-%20Can%20I%20Call%20You%20Tonight.mp3" w-tid="12">Can I Call You Tonight? <button class="play-button" w-tid="13">▶</button></li>
+      <li data-src="https://github.com/sebas-tt/sebas-tt.github.io/raw/main/grentperez,%20Lime%20Cordiale%20-%20Op%20Shop%20Lover.mp3" w-tid="14">Op Shop Lover <button class="play-button" w-tid="15">▶</button></li>
+      <li data-src="https://github.com/sebas-tt/sebas-tt.github.io/raw/main/GROOVY%20-%20jersey%20luv%20(turn%20me%20on).mp3" w-tid="16">jersey luv <button class="play-button" w-tid="17">▶</button></li>
+      <li data-src="https://github.com/sebas-tt/sebas-tt.github.io/raw/main/Kanii,%20Trippie%20Redd%20-%20sins%20(let%20me%20in)%20-%20Remix.mp3" w-tid="18">sins (let me in) <button class="play-button" w-tid="19">▶</button></li>
+    </ul>
+    <div class="player" w-tid="20">
+      <div class="album-art" w-tid="21">
+        <span w-tid="22">♪</span>
+      </div>
+      <div id="nowPlaying" w-tid="23"></div>
+      <div class="controls" w-tid="24">
+        <button id="playPauseBtn" class="play-pause" w-tid="25">▶</button>
+      </div>
+      <div class="progress-bar" w-tid="26">
+        <div class="progress" id="progress" w-tid="27"></div>
+      </div>
+      <div class="time" w-tid="28">
+        <span id="currentTime" w-tid="29">0:00</span>
+        <span id="duration" w-tid="30">0:00</span>
+      </div>
+    </div>
+  </div>
+
+  <audio id="audioPlayer" w-tid="31"></audio>
+
+  <script w-tid="32">
+    const audioPlayer = document.getElementById('audioPlayer');
+    const playlist = document.getElementById('playlist');
+    const nowPlaying = document.getElementById('nowPlaying');
+    const playPauseBtn = document.getElementById('playPauseBtn');
+    const progressBar = document.getElementById('progress');
+    const currentTimeEl = document.getElementById('currentTime');
+    const durationEl = document.getElementById('duration');
+    let currentTrack = 0;
+
+    playlist.addEventListener('click', function(e) {
+      if(e.target && e.target.nodeName == "LI") {
+        playSong(e.target);
+      } else if(e.target && e.target.classList.contains('play-button')) {
+        playSong(e.target.parentElement);
+      }
+    });
+
+    function playSong(trackElement) {
+      const trackSrc = trackElement.getAttribute('data-src');
+      audioPlayer.src = trackSrc;
+      audioPlayer.play();
+      nowPlaying.textContent = trackElement.textContent.replace('▶', '').trim();
+      
+      playlist.querySelectorAll('li').forEach(item => item.classList.remove('active'));
+      trackElement.classList.add('active');
+      
+      currentTrack = Array.from(playlist.children).indexOf(trackElement);
+      playPauseBtn.textContent = '❚❚';
+    }
+
+    playPauseBtn.addEventListener('click', togglePlayPause);
+
+    function togglePlayPause() {
+      if (audioPlayer.paused) {
+        audioPlayer.play();
+        playPauseBtn.textContent = '❚❚';
+      } else {
+        audioPlayer.pause();
+        playPauseBtn.textContent = '▶';
+      }
+    }
+
+    audioPlayer.addEventListener('timeupdate', updateProgress);
+    audioPlayer.addEventListener('loadedmetadata', () => {
+      durationEl.textContent = formatTime(audioPlayer.duration);
+    });
+
+    function updateProgress() {
+      const percent = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+      progressBar.style.width = `${percent}%`;
+      currentTimeEl.textContent = formatTime(audioPlayer.currentTime);
+    }
+
+    function formatTime(seconds) {
+      const minutes = Math.floor(seconds / 60);
+      const remainingSeconds = Math.floor(seconds % 60);
+      return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+    }
+
+    audioPlayer.addEventListener('ended', playNext);
+
+    function playNext() {
+      currentTrack++;
+      if (currentTrack >= playlist.children.length) {
+        currentTrack = 0;
+      }
+      playSong(playlist.children[currentTrack]);
+    }
+  </script>
+</body></html>
